@@ -1,0 +1,306 @@
+@import 'utilite.CSS';
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+   --secondary:#070606;
+}
+body{
+    font-family: 'poppines', sans-serif ;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smotthing:antialiased;
+}
+header{
+    background-color: var(--dark);
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 90%,0 100%);
+}
+.container{
+    max-width: 1152px;
+    padding: 0 15 px;
+    margin: 0 auto;
+}
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition:all .11s ease ;
+}
+header nav .left a:hover{
+    color:var(--primary);
+}
+header nav{
+    padding:2rem 0 ;
+}
+header nav .branding{
+    margin-right: 3rem;
+}
+.hero{
+    padding-right: 3rem 0;
+}
+.hero .left img {
+    width:300px;
+}
+.hero .right{
+    color:var(--pure);   
+}
+.hero .right h6{
+    font-size:1.6rem;
+    color: var(--primary);
+    margin-top: 1rem;
+}
+.hero .right h1{
+    font-size:4rem ;
+    font-weight: 100;
+    margin-top: -2rem;
+}
+.hero .right h3{
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+.hero .right h1 span{
+    color: var(--primary);
+}
+.hero .right{
+    line-height:1.9 ;
+    margin-bottom:2rem ;
+}
+.hero .right{
+    margin-top: -5rem;
+}
+section{
+    padding:6rem 0;
+}
+section.about.img{
+    height: 450px;
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight:400 ;
+}
+section.about h1 span{
+    color: var(--primary);
+}
+section.about h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+section.about p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    line-height: 1.9;
+}
+.about .social a.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+.about .social a.fa:hover {
+    opacity: 0.7;
+    
+}
+.about .social a .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .about .social a .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .about .social a .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .about .social a .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+section.about{
+    border-block-width: 5px;
+    border-block-end-style: solid;
+    border-block-color: var(black);
+    inline-size: 100%;
+}
+.section-headding{
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5;
+}
+.section-headding span{
+    color: var(--primary);
+}
+.section-headding + p{
+color: var(--ternary);
+font-family: 'Lato', sans-serif ;
+margin-bottom:1rem;
+text-align: center;
+}
+#card-wrapper{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    grid-column-gap: 2rem; 
+    grid-row-gap:2rem;
+
+}
+#card-wrapper .card{
+    background: var(--ternary);
+    padding:1rem 1rem;
+    color: #FFFFFF;
+    position: relative;
+    text-align: center;
+}
+#card-wrapper img{
+   
+    background:rgb(111, 197, 197);
+}
+
+#card-wrapper.card img{
+    position:absolute;
+    top: -5.5rem;
+    transform: translatex(-50%);
+}
+#card-wrapper .card h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+#card-wrapper .card p{
+    color: var(--primary);
+font-family: 'Lato', sans-serif ;
+}
+#card-wrapper.card:hover{
+    background: var(--pure);
+}
+section.freelancer{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("camera.jpeg");
+    background-repeat: none;
+    color: var(--pure);
+    clip-path: polygon(0 0,100% 0,100% 100%,60% 80%,0 100%);
+    padding-bottom: 8rem;
+}
+section.freelancer h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+section.freelancer h1{
+    margin-bottom:2rem ;
+    font-family:'Lato', sans-serif;
+}
+section.work{
+    background: var(--light);
+}
+section.work #card-wrapper{
+    display: grid;
+    grid-template-columns:repeat(3 1fr) ;
+}
+section.work #card-wrapper .card{
+    position: relative;
+    height: 300px;
+}
+section.work #card-wrapper .card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba( 61,207,211, 0.9);  
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    color: var(--ternary);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+section.work #card-wrapper .card:hover .overlay{
+opacity: 1;
+}
+section.work #card-wrapper .card .overlay{
+    color: var(--secondary);
+    text-decoration: none;
+}
+section.work #card-wrapper .card .overlay img{
+    height: 100%;
+    width:100% ;
+}
+section.contact .input-wrap-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--ternary);
+    font-size: 0.8rem;
+}
+section.contact .input-wrap-2{
+ display: flex;
+ flex-direction: column;
+}
+section.contact .input-wrap-2 input{
+    margin-bottom: 2rem;
+    border: 1px solid var(--ternary);
+    font-size: 0.8rem;
+}
+section.contact .input-wrap-2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--ternary);
+    font-size: 0.8rem;
+}
+section.contact input{
+    padding: 1rem ;
+}
+section.contact input:focus section.contact .input-wrap-2 textarea{
+    outline: none ;
+    }
+    section.contact .btn-wrapper{
+        text-align: center;
+        margin-top: 2rem;
+    }
+.from{
+    padding: 3rem;
+}
+footer{
+    color: antiquewhite;
+    background: var(--dark);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+footer.footer-logo{
+    margin-bottom: 5rem;
+
+}
+footer #footer-socials a{
+    margin: 3rem;
+    padding: 2%;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+
